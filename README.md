@@ -17,7 +17,7 @@ TODO
 Role Variables
 --------------
 
-TODO
+* artifactory_install: true
 
 Dependencies
 ------------
