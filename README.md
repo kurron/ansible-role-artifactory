@@ -1,7 +1,13 @@
 Role Name
 =========
 
-Installation of tools than any self-respecting JVM developer loves and needs.
+Installation of the open source version of Artifactory.
+
+Connect via `http://<some ip>:8081/artifactory/` using the credentials `admin`/`password`.
+After logging into the system, you can opt to import my system configuration.  The
+export folder is in the home directory of provisioned machine and is named `artifactory-system-export`.
+When you imort the system, you must ensure that ` Exclude Content` and ` Exclude Metadata` have been selected.
+Otherwise, the import will fail.
 
 Requirements
 ------------
@@ -11,13 +17,7 @@ TODO
 Role Variables
 --------------
 
-* jvm_sdkman_install: true
-* jvm_intellij_install: true
-* jvm_intellij_version: 2016.2.4
-* jvm_intellij_build: 162.2032.8
-* jvm_intellij_share_jdk: true
-* jvm_charles_install: true
-* jvm_charles_version: 4.0.1
+TODO
 
 Dependencies
 ------------
@@ -30,7 +30,7 @@ Example Playbook
 ```
 - hosts: servers
   roles:
-      - { role: kurron.jvm-developer, jvm_charles_install: true }
+      - { role: kurron.artifactory }
 ```
 
 License
